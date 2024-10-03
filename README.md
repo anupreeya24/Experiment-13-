@@ -13,6 +13,30 @@ Function Overloading is a feature in many programming languages (like C++, Java,
 2)Different Parameters: Functions differ in type, number, or order of parameters.
 
 3)Compile-Time Polymorphism: Overloading is resolved at compile time.
+#include <iostream>
+using namespace std;
+
+// Function to add two integers
+int add(int a, int b) {
+    return a + b;
+}
+
+// Function to add two doubles
+double add(double a, double b) {
+    return a + b;
+}
+
+// Function to add three integers
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+
+int main() {
+    cout << "Sum of 2 and 3: " << add(2, 3) << endl; // Calls int add(int, int)
+    cout << "Sum of 2.5 and 3.5: " << add(2.5, 3.5) << endl; // Calls double add(double, double)
+    cout << "Sum of 1, 2, and 3: " << add(1, 2, 3) << endl; // Calls int add(int, int, int)
+    return 0;
+}
 # Algorithm:
 Function overloading:-
 1)Start
